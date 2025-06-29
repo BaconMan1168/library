@@ -34,3 +34,8 @@ function displayBooks(){
 }
 
 const newBookBtn = document.querySelector(".new-book");
+newBookBtn.addEventListener("click", event => {
+    const bookForm = document.getElementById("new-book-form");
+    bookForm.classList.toggle("show");
+})
+

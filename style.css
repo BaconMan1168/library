@@ -27,3 +27,12 @@ h1{
     flex-wrap:wrap;
     max-width:900px;
 }
+
+.book-form{
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.book-form.show{
+    opacity:1;
+}
