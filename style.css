@@ -21,16 +21,30 @@ h1{
     cursor: pointer;
 }
 
+.main{
+    display:flex;
+}
+
+
+
 .lib-placeholder{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    max-width:900px;
+    width:100%;
+    order:1;
 }
 
 .book-form{
+    width:225px;
     opacity: 0;
     transition: opacity 0.4s ease;
+    padding:20px;
+
+}
+
+form div:not(:first-child, :last-child){
+    margin: 15px 0 15px 0;
 }
 
 .book-form.show{

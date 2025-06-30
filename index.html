@@ -9,37 +9,41 @@
     </head>
     <body>
         <h1>The Library</h1>
+        
         <div class="btn-container">
             <button class="show-books">Show Books</button>
             <button class="new-book">New Book</button>
         </div>
+        
+        <div class="main">
+            <div class="lib-placeholder">
 
-        <div class="lib-placeholder">
+            </div>
 
+            <div class="book-form" id="new-book-form">
+                <form action="">
+                    <div>
+                        <label for="title">Book Name</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+
+                    <div>
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author">
+                    </div>
+
+                    <div>
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" name="genre">
+                    </div>
+
+                    <div>
+                        <button type="submit">Create Book</button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="book-form" id="new-book-form">
-            <form action="">
-                <div>
-                    <label for="book-name">Book Name</label>
-                    <input type="text" id="book-name" name="book-name">
-                </div>
-
-                <div>
-                    <label for="author">Author</label>
-                    <input type="text" id="author" name="author">
-                </div>
-
-                <div>
-                    <label for="genre">Genre</label>
-                    <input type="text" id="genre" name="genre">
-                </div>
-
-                <div>
-                    <button type="submit">Create Book</button>
-                </div>
-            </form>
-        </div>
+        
         
     </body>
 </html>
