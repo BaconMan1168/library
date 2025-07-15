@@ -12,7 +12,7 @@ class Book{
 
 
 function addBookToLibrary(title, author, genre){
-    library.push(Book(title, author, genre));
+    library.push(new Book(title, author, genre));
 }
 
 function displayBooks(){
@@ -64,9 +64,11 @@ newBookBtn.addEventListener("click", event => {
     bookForm.classList.toggle("show");
 })
 
-const formSubmit = document.querySelector("[type=submit]");
-formSubmit.addEventListener("click", event =>{
+const formSubmit = document.querySelector(".book-form");
+formSubmit.addEventListener("submit", event =>{
     event.preventDefault();
+
+    
 
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
@@ -79,3 +81,30 @@ formSubmit.addEventListener("click", event =>{
 
 const showBookBtn = document.querySelector(".show-books");
 showBookBtn.addEventListener("click", displayBooks);
+
+
+const bookTitle = document.getElementById("title");
+const bookAuthor = document.getElementById("author");
+const bookGenre = document.getElementById("genre");
+
+
+
+
+bookTitle.addEventListener("input", () => {
+    if (bookTitle.validity.tooShort){
+        bookTitle.setCustomValidity(`Book needs to be 3 characters long. Yours is ${bookTitle.value.length} characters long`);
+    }
+    else{
+        bookTitle.setCustomValidity("");
+    }
+})
+
+bookAuthor.addEventListener("input", () => {
+    if (bookAuthor.validity.tooShort){
+        bookAuthor.setCustomValidity(`Author needs to be 5 characters long. Yours is ${bookAuthor.value.length} characters long`);
+    }
+    else{
+        bookAuthor.setCustomValidity("");
+    }
+})
+
